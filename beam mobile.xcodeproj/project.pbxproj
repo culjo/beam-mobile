@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CECB785F21FC8973008272EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB785E21FC8973008272EC /* AppDelegate.swift */; };
+		CECB786121FC8973008272EC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB786021FC8973008272EC /* RootViewController.swift */; };
+		CECB786321FC8973008272EC /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB786221FC8973008272EC /* DataViewController.swift */; };
+		CECB786521FC8973008272EC /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB786421FC8973008272EC /* ModelController.swift */; };
+		CECB786821FC8973008272EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECB786621FC8973008272EC /* Main.storyboard */; };
+		CECB786A21FC8975008272EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECB786921FC8975008272EC /* Assets.xcassets */; };
+		CECB786D21FC8975008272EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECB786B21FC8975008272EC /* LaunchScreen.storyboard */; };
+		CECB787821FC8975008272EC /* beam_mobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB787721FC8975008272EC /* beam_mobileTests.swift */; };
+		CECB788321FC8975008272EC /* beam_mobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB788221FC8975008272EC /* beam_mobileUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CECB787421FC8975008272EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CECB785321FC8973008272EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CECB785A21FC8973008272EC;
+			remoteInfo = "beam mobile";
+		};
+		CECB787F21FC8975008272EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CECB785321FC8973008272EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CECB785A21FC8973008272EC;
+			remoteInfo = "beam mobile";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CECB785B21FC8973008272EC /* beam mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beam mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECB785E21FC8973008272EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CECB786021FC8973008272EC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		CECB786221FC8973008272EC /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		CECB786421FC8973008272EC /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		CECB786721FC8973008272EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CECB786921FC8975008272EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CECB786C21FC8975008272EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CECB786E21FC8975008272EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECB787321FC8975008272EC /* beam mobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "beam mobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECB787721FC8975008272EC /* beam_mobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beam_mobileTests.swift; sourceTree = "<group>"; };
+		CECB787921FC8975008272EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECB787E21FC8975008272EC /* beam mobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "beam mobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECB788221FC8975008272EC /* beam_mobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beam_mobileUITests.swift; sourceTree = "<group>"; };
+		CECB788421FC8975008272EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CECB785821FC8973008272EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECB787021FC8975008272EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECB787B21FC8975008272EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CECB785221FC8973008272EC = {
+			isa = PBXGroup;
+			children = (
+				CECB785D21FC8973008272EC /* beam mobile */,
+				CECB787621FC8975008272EC /* beam mobileTests */,
+				CECB788121FC8975008272EC /* beam mobileUITests */,
+				CECB785C21FC8973008272EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CECB785C21FC8973008272EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CECB785B21FC8973008272EC /* beam mobile.app */,
+				CECB787321FC8975008272EC /* beam mobileTests.xctest */,
+				CECB787E21FC8975008272EC /* beam mobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CECB785D21FC8973008272EC /* beam mobile */ = {
+			isa = PBXGroup;
+			children = (
+				CECB785E21FC8973008272EC /* AppDelegate.swift */,
+				CECB786021FC8973008272EC /* RootViewController.swift */,
+				CECB786221FC8973008272EC /* DataViewController.swift */,
+				CECB786421FC8973008272EC /* ModelController.swift */,
+				CECB786621FC8973008272EC /* Main.storyboard */,
+				CECB786921FC8975008272EC /* Assets.xcassets */,
+				CECB786B21FC8975008272EC /* LaunchScreen.storyboard */,
+				CECB786E21FC8975008272EC /* Info.plist */,
+			);
+			path = "beam mobile";
+			sourceTree = "<group>";
+		};
+		CECB787621FC8975008272EC /* beam mobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				CECB787721FC8975008272EC /* beam_mobileTests.swift */,
+				CECB787921FC8975008272EC /* Info.plist */,
+			);
+			path = "beam mobileTests";
+			sourceTree = "<group>";
+		};
+		CECB788121FC8975008272EC /* beam mobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CECB788221FC8975008272EC /* beam_mobileUITests.swift */,
+				CECB788421FC8975008272EC /* Info.plist */,
+			);
+			path = "beam mobileUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CECB785A21FC8973008272EC /* beam mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECB788721FC8975008272EC /* Build configuration list for PBXNativeTarget "beam mobile" */;
+			buildPhases = (
+				CECB785721FC8973008272EC /* Sources */,
+				CECB785821FC8973008272EC /* Frameworks */,
+				CECB785921FC8973008272EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "beam mobile";
+			productName = "beam mobile";
+			productReference = CECB785B21FC8973008272EC /* beam mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CECB787221FC8975008272EC /* beam mobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECB788A21FC8975008272EC /* Build configuration list for PBXNativeTarget "beam mobileTests" */;
+			buildPhases = (
+				CECB786F21FC8975008272EC /* Sources */,
+				CECB787021FC8975008272EC /* Frameworks */,
+				CECB787121FC8975008272EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECB787521FC8975008272EC /* PBXTargetDependency */,
+			);
+			name = "beam mobileTests";
+			productName = "beam mobileTests";
+			productReference = CECB787321FC8975008272EC /* beam mobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CECB787D21FC8975008272EC /* beam mobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECB788D21FC8975008272EC /* Build configuration list for PBXNativeTarget "beam mobileUITests" */;
+			buildPhases = (
+				CECB787A21FC8975008272EC /* Sources */,
+				CECB787B21FC8975008272EC /* Frameworks */,
+				CECB787C21FC8975008272EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CECB788021FC8975008272EC /* PBXTargetDependency */,
+			);
+			name = "beam mobileUITests";
+			productName = "beam mobileUITests";
+			productReference = CECB787E21FC8975008272EC /* beam mobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CECB785321FC8973008272EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = novugrid;
+				TargetAttributes = {
+					CECB785A21FC8973008272EC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CECB787221FC8975008272EC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CECB785A21FC8973008272EC;
+					};
+					CECB787D21FC8975008272EC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CECB785A21FC8973008272EC;
+					};
+				};
+			};
+			buildConfigurationList = CECB785621FC8973008272EC /* Build configuration list for PBXProject "beam mobile" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CECB785221FC8973008272EC;
+			productRefGroup = CECB785C21FC8973008272EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CECB785A21FC8973008272EC /* beam mobile */,
+				CECB787221FC8975008272EC /* beam mobileTests */,
+				CECB787D21FC8975008272EC /* beam mobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CECB785921FC8973008272EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECB786D21FC8975008272EC /* LaunchScreen.storyboard in Resources */,
+				CECB786A21FC8975008272EC /* Assets.xcassets in Resources */,
+				CECB786821FC8973008272EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECB787121FC8975008272EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECB787C21FC8975008272EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CECB785721FC8973008272EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECB786121FC8973008272EC /* RootViewController.swift in Sources */,
+				CECB786521FC8973008272EC /* ModelController.swift in Sources */,
+				CECB786321FC8973008272EC /* DataViewController.swift in Sources */,
+				CECB785F21FC8973008272EC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECB786F21FC8975008272EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECB787821FC8975008272EC /* beam_mobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECB787A21FC8975008272EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECB788321FC8975008272EC /* beam_mobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CECB787521FC8975008272EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CECB785A21FC8973008272EC /* beam mobile */;
+			targetProxy = CECB787421FC8975008272EC /* PBXContainerItemProxy */;
+		};
+		CECB788021FC8975008272EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CECB785A21FC8973008272EC /* beam mobile */;
+			targetProxy = CECB787F21FC8975008272EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CECB786621FC8973008272EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CECB786721FC8973008272EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CECB786B21FC8975008272EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CECB786C21FC8975008272EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CECB788521FC8975008272EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CECB788621FC8975008272EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CECB788821FC8975008272EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6TVSDW7PY;
+				INFOPLIST_FILE = "beam mobile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.novugrid.beam-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CECB788921FC8975008272EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6TVSDW7PY;
+				INFOPLIST_FILE = "beam mobile/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.novugrid.beam-mobile";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CECB788B21FC8975008272EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6TVSDW7PY;
+				INFOPLIST_FILE = "beam mobileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.novugrid.beam-mobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beam mobile.app/beam mobile";
+			};
+			name = Debug;
+		};
+		CECB788C21FC8975008272EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6TVSDW7PY;
+				INFOPLIST_FILE = "beam mobileTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.novugrid.beam-mobileTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/beam mobile.app/beam mobile";
+			};
+			name = Release;
+		};
+		CECB788E21FC8975008272EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6TVSDW7PY;
+				INFOPLIST_FILE = "beam mobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.novugrid.beam-mobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "beam mobile";
+			};
+			name = Debug;
+		};
+		CECB788F21FC8975008272EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6TVSDW7PY;
+				INFOPLIST_FILE = "beam mobileUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.novugrid.beam-mobileUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "beam mobile";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CECB785621FC8973008272EC /* Build configuration list for PBXProject "beam mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECB788521FC8975008272EC /* Debug */,
+				CECB788621FC8975008272EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECB788721FC8975008272EC /* Build configuration list for PBXNativeTarget "beam mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECB788821FC8975008272EC /* Debug */,
+				CECB788921FC8975008272EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECB788A21FC8975008272EC /* Build configuration list for PBXNativeTarget "beam mobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECB788B21FC8975008272EC /* Debug */,
+				CECB788C21FC8975008272EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECB788D21FC8975008272EC /* Build configuration list for PBXNativeTarget "beam mobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECB788E21FC8975008272EC /* Debug */,
+				CECB788F21FC8975008272EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CECB785321FC8973008272EC /* Project object */;
+}
