@@ -6,3 +6,8 @@ github "ReactiveX/RxSwift" "4.4.0"
 github "SnapKit/SnapKit" "4.2.0"
 github "cbpowell/MarqueeLabel" "3.2.0"
 github "jpotts18/SwiftValidator" "5.0.0"
+
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseInAppMessagingBinary.json"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseInAppMessagingDisplayBinary.json"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseMessagingBinary.json"

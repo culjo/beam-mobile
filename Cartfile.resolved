@@ -1,3 +1,7 @@
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json" "5.16.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseInAppMessagingBinary.json" "5.16.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseInAppMessagingDisplayBinary.json" "5.16.0"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseMessagingBinary.json" "5.16.0"
 github "Alamofire/Alamofire" "5.0.0.beta.1"
 github "Alamofire/AlamofireImage" "3.5.0"
 github "Daltron/NotificationBanner" "17badd31e450b0a35917cf1a877dee7a77d9ae4f"
