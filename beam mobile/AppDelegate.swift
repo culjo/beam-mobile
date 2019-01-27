@@ -39,6 +39,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         application.registerForRemoteNotifications()
+        
+        // Check for login status
+        if UserSessionManger.isLoggedIn {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let homeController = storyBoard.instantiateViewController(withIdentifier: "HomeTabBarController")
+            self.window?.rootViewController = homeController
+            self.window?.makeKeyAndVisible()
+        }
 
         return true
     }

@@ -8,17 +8,27 @@
 
 import UIKit
 import Firebase
+import RxSwift
 
-@objc(ProductsTableViewController)
-class ProductsTableViewController: UITableViewController {
+//@objc(ProductsTableViewController)
+class ProductsTableViewController: UITableViewController, OnCellButtonClicked {
+    
+    
+    
+    var items: [Product] = [] // empty array
     
     let cellIdentifier = "cellRow"
+    
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.displayFCMToken(notification:)), name: NSNotification.Name("FCMToken"), object: nil)
 
+        
+        fetchProduct()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,6 +46,28 @@ class ProductsTableViewController: UITableViewController {
         }
     }
     
+    func saveToken(token: String) {
+        
+        
+        
+    }
+    
+    func fetchProduct() {
+        
+        ApiClient.fetchProducts()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { products in
+                
+                // print(products)
+                self.items = products.data;
+                self.tableView.reloadData()
+                
+            }, onError: { error in
+                print(error)
+            }).disposed(by: disposeBag)
+        
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,16 +77,63 @@ class ProductsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 20
+        return items.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProductTableViewCell
 
         // Configure the cell...
+        cell.onCellButtonClicked = self
+        cell.updateModel(with: items[indexPath.row])
 
         return cell
+    }
+    
+    func onCellButtonClicked(product: Product) {
+        let alertController = UIAlertController(title: "Set Your Price", message: "Get notified once this product disocunt has matched your price", preferredStyle: UIAlertController.Style.alert)
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Your Price"
+            textField.keyboardType = UIKeyboardType.decimalPad
+        }
+        
+        
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let firstTextField = alertController.textFields![0] as UITextField
+            // let secondTextField = alertController.textFields![1] as UITextField
+            self.saveUserProductPrice(productId: product.productID, price: firstTextField.text!)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
+            (action : UIAlertAction!) -> Void in })
+        
+//        alertController.addTextField { (textField : UITextField!) -> Void in
+//            textField.placeholder = "Enter First Name"
+//        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func saveUserProductPrice(productId: Int, price: String) {
+        
+        // UserSessionManger.userId
+        ApiClient.subcribeToProduct(productId: productId, userId: UserSessionManger.userId, myPrice: price)
+        .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { userProduct in
+                if userProduct.success {
+                    print("USER SUBSCRIBE TO PRODUCT \(productId) at \(price)")
+                }
+            }, onError: {
+                err in
+                print("FAILED TO SUBSCRIBE USERS")
+                print(err)
+            }).disposed(by: disposeBag)
+        
     }
     
 

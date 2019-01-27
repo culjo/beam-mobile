@@ -40,6 +40,20 @@
 		CED0089121FD1FF90066F499 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED0088621FD1FF80066F499 /* FirebaseCoreDiagnostics.framework */; };
 		CED0089221FD1FF90066F499 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED0088721FD1FF80066F499 /* FirebaseMessaging.framework */; };
 		CED0089321FD1FF90066F499 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED0088821FD1FF80066F499 /* Protobuf.framework */; };
+		CED0089621FD48ED0066F499 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0089521FD48ED0066F499 /* ProductTableViewCell.swift */; };
+		CED0089C21FD4B950066F499 /* ApiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0089B21FD4B950066F499 /* ApiConfiguration.swift */; };
+		CED0089E21FD4BC00066F499 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0089D21FD4BC00066F499 /* ApiClient.swift */; };
+		CED008A121FD4C1B0066F499 /* ProductsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008A021FD4C1B0066F499 /* ProductsEndpoint.swift */; };
+		CED008A321FD51AA0066F499 /* UrlConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008A221FD51AA0066F499 /* UrlConstants.swift */; };
+		CED008A521FD52CE0066F499 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008A421FD52CE0066F499 /* ProductModel.swift */; };
+		CED008A721FD98300066F499 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED008A621FD98300066F499 /* Kingfisher.framework */; };
+		CED008AA21FDC9F20066F499 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008A921FDC9F20066F499 /* LoginTableViewController.swift */; };
+		CED008AC21FDCC560066F499 /* UsersEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008AB21FDCC560066F499 /* UsersEndpoint.swift */; };
+		CED008AE21FDD4880066F499 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008AD21FDD4880066F499 /* UserModel.swift */; };
+		CED008B121FDD9360066F499 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008B021FDD9360066F499 /* UIViewControllerExt.swift */; };
+		CED008B421FDDE2A0066F499 /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008B321FDDE2A0066F499 /* UserSessionManager.swift */; };
+		CED008B621FDEF8B0066F499 /* UserProductsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008B521FDEF8B0066F499 /* UserProductsEndpoint.swift */; };
+		CED008B821FDF3980066F499 /* UserProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008B721FDF3980066F499 /* UserProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +128,20 @@
 		CED0088721FD1FF80066F499 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = "<group>"; };
 		CED0088821FD1FF80066F499 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
 		CED0089421FD210D0066F499 /* beam mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "beam mobile.entitlements"; sourceTree = "<group>"; };
+		CED0089521FD48ED0066F499 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		CED0089B21FD4B950066F499 /* ApiConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConfiguration.swift; sourceTree = "<group>"; };
+		CED0089D21FD4BC00066F499 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		CED008A021FD4C1B0066F499 /* ProductsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEndpoint.swift; sourceTree = "<group>"; };
+		CED008A221FD51AA0066F499 /* UrlConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlConstants.swift; sourceTree = "<group>"; };
+		CED008A421FD52CE0066F499 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		CED008A621FD98300066F499 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		CED008A921FDC9F20066F499 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		CED008AB21FDCC560066F499 /* UsersEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersEndpoint.swift; sourceTree = "<group>"; };
+		CED008AD21FDD4880066F499 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CED008B021FDD9360066F499 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		CED008B321FDDE2A0066F499 /* UserSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
+		CED008B521FDEF8B0066F499 /* UserProductsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProductsEndpoint.swift; sourceTree = "<group>"; };
+		CED008B721FDF3980066F499 /* UserProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED008A721FD98300066F499 /* Kingfisher.framework in Frameworks */,
 				CECB78A121FC9398008272EC /* SnapKit.framework in Frameworks */,
 				CECB78A221FC9398008272EC /* NotificationBanner.framework in Frameworks */,
 				CECB789221FC936E008272EC /* Alamofire.framework in Frameworks */,
@@ -183,9 +212,11 @@
 		CECB785D21FC8973008272EC /* beam mobile */ = {
 			isa = PBXGroup;
 			children = (
+				CED008AF21FDD8E40066F499 /* Extentions */,
+				CECB78A821FCB227008272EC /* UI */,
+				CED0089721FD4A030066F499 /* ModelLayer */,
 				CED0089421FD210D0066F499 /* beam mobile.entitlements */,
 				CECB78C921FD1B5B008272EC /* Firebase */,
-				CECB78A821FCB227008272EC /* UI */,
 				CECB785E21FC8973008272EC /* AppDelegate.swift */,
 				CECB786021FC8973008272EC /* RootViewController.swift */,
 				CECB786221FC8973008272EC /* DataViewController.swift */,
@@ -222,6 +253,7 @@
 		CECB789021FC936E008272EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CED008A621FD98300066F499 /* Kingfisher.framework */,
 				CECB78C421FD14D5008272EC /* FirebaseCore.framework */,
 				CECB78C221FD142A008272EC /* Protobuf.framework */,
 				CECB78C021FD109D008272EC /* FirebaseAnalytics.framework */,
@@ -247,6 +279,7 @@
 		CECB78A821FCB227008272EC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CED008A821FDC9D70066F499 /* Login */,
 				CECB78B521FCC4EB008272EC /* Cells */,
 				CECB78AC21FCC3E4008272EC /* Favourites */,
 				CECB78A921FCBBB4008272EC /* Products */,
@@ -258,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				CECB78AA21FCBBDE008272EC /* ProductsTableViewController.swift */,
+				CED0089521FD48ED0066F499 /* ProductTableViewCell.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -305,6 +339,63 @@
 				CED0088621FD1FF80066F499 /* FirebaseCoreDiagnostics.framework */,
 			);
 			path = Analytics;
+			sourceTree = "<group>";
+		};
+		CED0089721FD4A030066F499 /* ModelLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CED008B221FDDE150066F499 /* Defaults */,
+				CED0089F21FD4BDE0066F499 /* Models */,
+				CED0089821FD4B210066F499 /* Network */,
+			);
+			path = ModelLayer;
+			sourceTree = "<group>";
+		};
+		CED0089821FD4B210066F499 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CED0089D21FD4BC00066F499 /* ApiClient.swift */,
+				CED0089B21FD4B950066F499 /* ApiConfiguration.swift */,
+				CED008A021FD4C1B0066F499 /* ProductsEndpoint.swift */,
+				CED008A221FD51AA0066F499 /* UrlConstants.swift */,
+				CED008AB21FDCC560066F499 /* UsersEndpoint.swift */,
+				CED008B521FDEF8B0066F499 /* UserProductsEndpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CED0089F21FD4BDE0066F499 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CED008A421FD52CE0066F499 /* ProductModel.swift */,
+				CED008AD21FDD4880066F499 /* UserModel.swift */,
+				CED008B721FDF3980066F499 /* UserProductModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CED008A821FDC9D70066F499 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CED008A921FDC9F20066F499 /* LoginTableViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CED008AF21FDD8E40066F499 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				CED008B021FDD9360066F499 /* UIViewControllerExt.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		CED008B221FDDE150066F499 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				CED008B321FDDE2A0066F499 /* UserSessionManager.swift */,
+			);
+			path = Defaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,10 +553,12 @@
 				"$(SRCROOT)/Carthage/Build/iOS/JGProgressHUD.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NotificationBanner.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftValidator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -478,12 +571,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED0089E21FD4BC00066F499 /* ApiClient.swift in Sources */,
+				CED008AC21FDCC560066F499 /* UsersEndpoint.swift in Sources */,
+				CED008B121FDD9360066F499 /* UIViewControllerExt.swift in Sources */,
 				CECB78B021FCC453008272EC /* FavouritesViewController.swift in Sources */,
+				CED008A121FD4C1B0066F499 /* ProductsEndpoint.swift in Sources */,
+				CED008B821FDF3980066F499 /* UserProductModel.swift in Sources */,
 				CECB786121FC8973008272EC /* RootViewController.swift in Sources */,
+				CED0089C21FD4B950066F499 /* ApiConfiguration.swift in Sources */,
+				CED008AA21FDC9F20066F499 /* LoginTableViewController.swift in Sources */,
+				CED008B421FDDE2A0066F499 /* UserSessionManager.swift in Sources */,
+				CED008A521FD52CE0066F499 /* ProductModel.swift in Sources */,
+				CED008AE21FDD4880066F499 /* UserModel.swift in Sources */,
+				CED008A321FD51AA0066F499 /* UrlConstants.swift in Sources */,
+				CED0089621FD48ED0066F499 /* ProductTableViewCell.swift in Sources */,
 				CECB786521FC8973008272EC /* ModelController.swift in Sources */,
 				CECB786321FC8973008272EC /* DataViewController.swift in Sources */,
 				CECB78B321FCC4E6008272EC /* ItemCell.swift in Sources */,
 				CECB785F21FC8973008272EC /* AppDelegate.swift in Sources */,
+				CED008B621FDEF8B0066F499 /* UserProductsEndpoint.swift in Sources */,
 				CECB78AB21FCBBDE008272EC /* ProductsTableViewController.swift in Sources */,
 				CECB78C821FD1986008272EC /* LekanObjc.m in Sources */,
 			);
