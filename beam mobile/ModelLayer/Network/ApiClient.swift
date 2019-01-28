@@ -39,13 +39,19 @@ class ApiClient {
         return performRxRequest(ProductsEndpoint.fetch())
     }
     
+    static func fetchUserProducts() -> Observable<UserProducts> {
+        return performRxRequest(UserProductsEndpoint.fetch(userId: UserSessionManger.userId))
+    }
+    
     static func login(phone: String, uuid: String) -> Observable<UserResponse> {
         return performRxRequest(UsersEndpoint.login(phone: phone, uniqueId: uuid))
     }
     
-    static func subcribeToProduct(productId: Int, userId: Int, myPrice: String) -> Observable<UserProductResponse> {
+    static func subcribeToProduct(productId: Int, userId: Int, myPrice: String) -> Observable<SubscriptionResponse> {
         return performRxRequest(ProductsEndpoint.addToWatchList(productId: productId, userId: userId, myPrice: myPrice))
     }
+    
+    
     
     
     // MARK: - The request functon to get results in an Observable

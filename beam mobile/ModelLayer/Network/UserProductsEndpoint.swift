@@ -11,7 +11,7 @@ import Alamofire
 
 enum UserProductsEndpoint: ApiConfiguration {
     
-    case fetch()
+    case fetch(userId: Int)
     case addToWatchList(productId: Int, userId: Int)
     
     var method: HTTPMethod {
@@ -25,8 +25,8 @@ enum UserProductsEndpoint: ApiConfiguration {
     
     var path: String {
         switch self {
-        case .fetch:
-            return "/products"
+        case .fetch(let userId):
+            return "/users/\(userId)/products" // all user products
         case .addToWatchList(let productid, _):
             return "/products/\(productid)/subscribe"
         }
@@ -34,7 +34,7 @@ enum UserProductsEndpoint: ApiConfiguration {
     
     var parameters: Parameters? {
         switch self {
-        case .fetch():
+        case .fetch(_):
             return nil
         case .addToWatchList(_, let userId):
             return ["userId" : userId]

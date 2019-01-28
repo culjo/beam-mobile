@@ -10,7 +10,7 @@ import Foundation
 
 //typealias Products = [Product]
 
-struct Products: Codable {
+class Products: Codable {
     let start, perPage, total: Int
     let data: [Product]
     
@@ -23,7 +23,7 @@ struct Products: Codable {
     }
 }
 
-struct Product: Codable {
+class Product: Codable {
     let productID: Int
     let name, slug, price, discount: String
     let priceToSubtract: String
@@ -31,6 +31,9 @@ struct Product: Codable {
     let isPromoEnabled: Bool
     let category, manufacturer, image, description: String
     let specifications, tags, createdOn, updatedOn: String
+    
+    //The bellow field are ignored from codable
+    var isInUserFavourite: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case productID = "product_id"

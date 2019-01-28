@@ -54,6 +54,8 @@
 		CED008B421FDDE2A0066F499 /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008B321FDDE2A0066F499 /* UserSessionManager.swift */; };
 		CED008B621FDEF8B0066F499 /* UserProductsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008B521FDEF8B0066F499 /* UserProductsEndpoint.swift */; };
 		CED008B821FDF3980066F499 /* UserProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008B721FDF3980066F499 /* UserProductModel.swift */; };
+		CED008BB21FE9B2B0066F499 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008BA21FE9B2B0066F499 /* BaseTableViewController.swift */; };
+		CED008BD21FEA1EC0066F499 /* SubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED008BC21FEA1EB0066F499 /* SubscriptionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		CED008B321FDDE2A0066F499 /* UserSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
 		CED008B521FDEF8B0066F499 /* UserProductsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProductsEndpoint.swift; sourceTree = "<group>"; };
 		CED008B721FDF3980066F499 /* UserProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProductModel.swift; sourceTree = "<group>"; };
+		CED008BA21FE9B2B0066F499 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		CED008BC21FEA1EB0066F499 /* SubscriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +283,7 @@
 		CECB78A821FCB227008272EC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CED008B921FE9A9D0066F499 /* Base */,
 				CED008A821FDC9D70066F499 /* Login */,
 				CECB78B521FCC4EB008272EC /* Cells */,
 				CECB78AC21FCC3E4008272EC /* Favourites */,
@@ -370,6 +375,7 @@
 				CED008A421FD52CE0066F499 /* ProductModel.swift */,
 				CED008AD21FDD4880066F499 /* UserModel.swift */,
 				CED008B721FDF3980066F499 /* UserProductModel.swift */,
+				CED008BC21FEA1EB0066F499 /* SubscriptionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -396,6 +402,14 @@
 				CED008B321FDDE2A0066F499 /* UserSessionManager.swift */,
 			);
 			path = Defaults;
+			sourceTree = "<group>";
+		};
+		CED008B921FE9A9D0066F499 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CED008BA21FE9B2B0066F499 /* BaseTableViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,6 +587,7 @@
 			files = (
 				CED0089E21FD4BC00066F499 /* ApiClient.swift in Sources */,
 				CED008AC21FDCC560066F499 /* UsersEndpoint.swift in Sources */,
+				CED008BD21FEA1EC0066F499 /* SubscriptionModel.swift in Sources */,
 				CED008B121FDD9360066F499 /* UIViewControllerExt.swift in Sources */,
 				CECB78B021FCC453008272EC /* FavouritesViewController.swift in Sources */,
 				CED008A121FD4C1B0066F499 /* ProductsEndpoint.swift in Sources */,
@@ -591,6 +606,7 @@
 				CECB785F21FC8973008272EC /* AppDelegate.swift in Sources */,
 				CED008B621FDEF8B0066F499 /* UserProductsEndpoint.swift in Sources */,
 				CECB78AB21FCBBDE008272EC /* ProductsTableViewController.swift in Sources */,
+				CED008BB21FE9B2B0066F499 /* BaseTableViewController.swift in Sources */,
 				CECB78C821FD1986008272EC /* LekanObjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

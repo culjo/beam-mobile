@@ -8,25 +8,28 @@
 
 import Foundation
 
-struct UserProductResponse: Codable {
-    let success: Bool
+struct UserProducts: Codable {
+    let success: Bool // TODO: Remove Please
     let message: String
-    let data: UserProduct
+    let data: [UserProduct]
 }
 
 struct UserProduct: Codable {
-    let userProductID: Int
-    let productID: Int
-    let userID: Int
+    let userProductID, userID, productID: Int
     let myPrice: String
-    let updatedOn, createdOn: String
+    let disabled: Bool
+    let createdOn, updatedOn: String
+    let product: Product
     
     enum CodingKeys: String, CodingKey {
         case userProductID = "user_product_id"
-        case productID = "product_id"
         case userID = "user_id"
+        case productID = "product_id"
         case myPrice = "my_price"
-        case updatedOn = "updated_on"
+        case disabled
         case createdOn = "created_on"
+        case updatedOn = "updated_on"
+        case product
     }
 }
+

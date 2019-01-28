@@ -49,6 +49,16 @@ class ProductTableViewCell: UITableViewCell {
         
         imageDisplayView.kf.indicatorType = .activity
         imageDisplayView.kf.setImage(with: URL(string: product.image))
+        
+        if self.product?.isInUserFavourite ?? false {
+            //addButton.titleLabel?.text = "wacthing"
+            addButton.isHidden = true
+//            addButton.isEnabled = false
+        } else {
+            addButton.isHidden = false
+            addButton.titleLabel?.text = "Add"
+//            addButton.isEnabled = true
+        }
     }
     
     

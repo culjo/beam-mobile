@@ -11,11 +11,11 @@ import Firebase
 import RxSwift
 
 //@objc(ProductsTableViewController)
-class ProductsTableViewController: UITableViewController, OnCellButtonClicked {
+class ProductsTableViewController: BaseTableViewController, OnCellButtonClicked {
     
     
     
-    var items: [Product] = [] // empty array
+    //var items: [Product] = [] // empty array
     
     let cellIdentifier = "cellRow"
     
@@ -25,9 +25,22 @@ class ProductsTableViewController: UITableViewController, OnCellButtonClicked {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.displayFCMToken(notification:)), name: NSNotification.Name("FCMToken"), object: nil)
-
         
-        fetchProduct()
+        
+        allProductSubject.subscribe(onNext: {
+            done in
+            if done {
+                self.tableView.reloadData()
+            }
+        }).disposed(by: disposeBag)
+        
+        userProductSubject.subscribe(onNext: {
+            done  in
+            self.checkForSubscribedProducts()
+            self.tableView.reloadData()
+        }).disposed(by: disposeBag)
+        
+        // fetchProduct()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,8 +61,6 @@ class ProductsTableViewController: UITableViewController, OnCellButtonClicked {
     
     func saveToken(token: String) {
         
-        
-        
     }
     
     func fetchProduct() {
@@ -59,7 +70,7 @@ class ProductsTableViewController: UITableViewController, OnCellButtonClicked {
             .subscribe(onNext: { products in
                 
                 // print(products)
-                self.items = products.data;
+                //self.items = products.data;
                 self.tableView.reloadData()
                 
             }, onError: { error in
@@ -77,7 +88,7 @@ class ProductsTableViewController: UITableViewController, OnCellButtonClicked {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return items.count
+        return allProducts?.data.count ?? 0 // items.count
     }
 
     
@@ -86,10 +97,30 @@ class ProductsTableViewController: UITableViewController, OnCellButtonClicked {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProductTableViewCell
 
         // Configure the cell...
-        cell.onCellButtonClicked = self
-        cell.updateModel(with: items[indexPath.row])
+        if let productsList = allProducts?.data {
+            
+            cell.onCellButtonClicked = self
+            cell.updateModel(with: productsList[indexPath.row])
+        }
+        
 
         return cell
+    }
+    
+    func checkForSubscribedProducts() {
+        guard let productList = allProducts?.data else { return }
+        guard let favouriteList = userProducts?.data else { return }
+        
+        for product in productList {
+            let found = favouriteList.contains { (uProduct) -> Bool in
+                return uProduct.productID == product.productID
+            }
+            if found {
+                product.isInUserFavourite = true
+            } else {
+                product.isInUserFavourite = false
+            }
+        }
     }
     
     func onCellButtonClicked(product: Product) {
@@ -104,7 +135,13 @@ class ProductsTableViewController: UITableViewController, OnCellButtonClicked {
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let firstTextField = alertController.textFields![0] as UITextField
             // let secondTextField = alertController.textFields![1] as UITextField
-            self.saveUserProductPrice(productId: product.productID, price: firstTextField.text!)
+            
+            if !firstTextField.text!.isEmpty {
+                self.saveUserProductPrice(productId: product.productID, price: firstTextField.text!)
+            } else {
+                
+            }
+            
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
@@ -124,8 +161,8 @@ class ProductsTableViewController: UITableViewController, OnCellButtonClicked {
         // UserSessionManger.userId
         ApiClient.subcribeToProduct(productId: productId, userId: UserSessionManger.userId, myPrice: price)
         .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { userProduct in
-                if userProduct.success {
+            .subscribe(onNext: { subscription in
+                if subscription.success {
                     print("USER SUBSCRIBE TO PRODUCT \(productId) at \(price)")
                 }
             }, onError: {
