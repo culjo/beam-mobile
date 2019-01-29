@@ -121,6 +121,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Products" id="aVZ-Au-K1U"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="OQo-H6-hcF">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Refresh">
+                                <attributes>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHE-iN-axK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,7 +230,7 @@
         <scene sceneID="FXs-Ur-pVZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Oz-Nb-gvg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="T2t-Fm-fkQ"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="T2t-Fm-fkQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dyK-eY-wzE">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -362,11 +374,11 @@
             </objects>
             <point key="canvasLocation" x="-887" y="-243"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Products-->
         <scene sceneID="aFd-WS-5tA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yIQ-Vq-G0X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="jMi-WK-Xro"/>
+                    <tabBarItem key="tabBarItem" title="Products" image="box-60" id="jMi-WK-Xro"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="40I-G7-aLF">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -383,6 +395,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="box-60" width="60" height="60"/>
         <image name="image-1" width="143" height="143"/>
         <namedColor name="colorClouds">
             <color red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

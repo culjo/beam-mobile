@@ -18,23 +18,6 @@ enum ApiError: Error {
 
 class ApiClient {
     
-//    static func getPosts(userId: Int) -> Observable<[PostDTO]> {
-//        return request(ApiRouter.getPosts(userId: userId))
-//    }
-    
-    // Note: this implementation uses the callback method
-    /*static func login(email: String, password: String, completion: @escaping (Result<UserDTO>) -> Void) {
-        AF.request(UserEndpoint.login(email: email, password: password))
-            .responseDecodable { (response: DataResponse<UserDTO>) in
-                completion(response.result)
-        }
-        
-    }
-    
-    static func createUser(params: [String: String]) -> Observable<UserDTO> {
-        return performRxRequest(UserEndpoint.register(params: params))// email: "", fullName: "", password: ""))
-    }*/
-    
     static func fetchProducts() -> Observable<Products> {
         return performRxRequest(ProductsEndpoint.fetch())
     }
@@ -51,6 +34,9 @@ class ApiClient {
         return performRxRequest(ProductsEndpoint.addToWatchList(productId: productId, userId: userId, myPrice: myPrice))
     }
     
+    static func saveFcmToken(userId: Int, fcmToken: String) -> Observable<ResponseUpdate> {
+        return performRxRequest(UsersEndpoint.saveFcmToken(userId: userId, token: fcmToken))
+    }
     
     
     
@@ -100,6 +86,24 @@ class ApiClient {
         }
         
     }
+    
+    
+    //    static func getPosts(userId: Int) -> Observable<[PostDTO]> {
+    //        return request(ApiRouter.getPosts(userId: userId))
+    //    }
+    
+    // Note: this implementation uses the callback method
+    /*static func login(email: String, password: String, completion: @escaping (Result<UserDTO>) -> Void) {
+     AF.request(UserEndpoint.login(email: email, password: password))
+     .responseDecodable { (response: DataResponse<UserDTO>) in
+     completion(response.result)
+     }
+     
+     }
+     
+     static func createUser(params: [String: String]) -> Observable<UserDTO> {
+     return performRxRequest(UserEndpoint.register(params: params))// email: "", fullName: "", password: ""))
+     }*/
     
     
 }

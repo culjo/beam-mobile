@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import RxSwift
+import NotificationBanner
 
 //@objc(ProductsTableViewController)
 class ProductsTableViewController: BaseTableViewController, OnCellButtonClicked {
@@ -32,6 +33,8 @@ class ProductsTableViewController: BaseTableViewController, OnCellButtonClicked 
             if done {
                 self.tableView.reloadData()
             }
+            self.stopRefereshing();
+            
         }).disposed(by: disposeBag)
         
         userProductSubject.subscribe(onNext: {
@@ -39,6 +42,8 @@ class ProductsTableViewController: BaseTableViewController, OnCellButtonClicked 
             self.checkForSubscribedProducts()
             self.tableView.reloadData()
         }).disposed(by: disposeBag)
+        
+        tableView.refreshControl?.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
         
         // fetchProduct()
         
@@ -56,11 +61,20 @@ class ProductsTableViewController: BaseTableViewController, OnCellButtonClicked 
         if let fcmToken = userInfo["token"] as? String {
             print("\n FCM TOKEN : \(fcmToken)")
             // self.fcmTokenMessage.text = "Received FCM token: \(fcmToken)"
+            // save FCM Token
+            saveToken(token: fcmToken)
         }
     }
     
     func saveToken(token: String) {
-        
+        ApiClient.saveFcmToken(userId: UserSessionManger.userId, fcmToken: token)
+        .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {
+                result in
+                if result.success {
+                    UserSessionManger.fcmToken = token
+                }
+            }).disposed(by: disposeBag)
     }
     
     func fetchProduct() {
@@ -145,11 +159,9 @@ class ProductsTableViewController: BaseTableViewController, OnCellButtonClicked 
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
-            (action : UIAlertAction!) -> Void in })
-        
-//        alertController.addTextField { (textField : UITextField!) -> Void in
-//            textField.placeholder = "Enter First Name"
-//        }
+            (action : UIAlertAction!) -> Void in
+            NotificationBanner(title: "Canceled", subtitle: "You did not set your favourite purchase price", style: .warning).show()
+        })
         
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
@@ -164,11 +176,13 @@ class ProductsTableViewController: BaseTableViewController, OnCellButtonClicked 
             .subscribe(onNext: { subscription in
                 if subscription.success {
                     print("USER SUBSCRIBE TO PRODUCT \(productId) at \(price)")
+                    NotificationBanner(title: "Purchase Price Set", subtitle: "Product Added to favourite & you will be notified once promo price matches your price. Thanks", style: .success).show()
                 }
             }, onError: {
                 err in
                 print("FAILED TO SUBSCRIBE USERS")
                 print(err)
+                NotificationBanner(title: "Oops! Try Again", subtitle: "we could not set your prefered price, Please Try again!", style: .warning).show()
             }).disposed(by: disposeBag)
         
     }
@@ -208,6 +222,26 @@ class ProductsTableViewController: BaseTableViewController, OnCellButtonClicked 
         return true
     }
     */
+    
+    
+    // MARK: Logic
+    func stopRefereshing() {
+        print("Refreshing Done...")
+        tableView.refreshControl?.endRefreshing()
+    }
+    
+    // MARK: Webservice
+    @objc func refreshData(_ sender: UIRefreshControl) {
+        
+        super.fecthAllProducts()
+        super.fecthAllUserProducts()
+        
+        /*Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false, block: {
+            timer in self.stopRefereshing()
+        })*/
+        
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -219,4 +253,5 @@ class ProductsTableViewController: BaseTableViewController, OnCellButtonClicked 
     }
     */
 
+    
 }

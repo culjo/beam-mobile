@@ -9,7 +9,7 @@
 import Foundation
 
 struct UserProducts: Codable {
-    let success: Bool // TODO: Remove Please
+    let success: Bool
     let message: String
     let data: [UserProduct]
 }

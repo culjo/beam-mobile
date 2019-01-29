@@ -20,7 +20,7 @@ class FavouritesViewController: BaseTableViewController {
         self.tableView.register(UINib(nibName:"ItemCell"  , bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
         userProductSubject.subscribe(onNext: { done in
-            
+            print(" FAV VIEW CONTROLLER RECIEVING THE MY DATA")
             if done {
                 self.tableView.reloadData()
             }

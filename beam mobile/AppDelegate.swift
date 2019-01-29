@@ -137,6 +137,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
         let userInfo = notification.request.content.userInfo
         
         // With swizzling disabled you must let Messaging know about the message, for Analytics
@@ -150,20 +151,24 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         print(userInfo)
         
         // Change this to your preferred presentation option
-        completionHandler([])
+        completionHandler(UNNotificationPresentationOptions.alert)
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        // Once A user taps a notification
         let userInfo = response.notification.request.content.userInfo
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
-            print("****************** Message ID: \(messageID)")
+            print("FROM NOTIFICATION RESPONSE -> Message ID: \(messageID)")
         }
         
         // Print full message.
+        print("\n USER TAPPED NOTIFICATION - BELLOW IS PAYLOAD")
         print(userInfo)
+        
         
         completionHandler()
     }

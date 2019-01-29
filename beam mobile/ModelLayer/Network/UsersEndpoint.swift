@@ -29,7 +29,7 @@ enum UsersEndpoint: ApiConfiguration {
         case .login:
             return "users/login"
         case .saveFcmToken:
-            return "/users/saveToken"
+            return "/save-token"
         }
     }
     
